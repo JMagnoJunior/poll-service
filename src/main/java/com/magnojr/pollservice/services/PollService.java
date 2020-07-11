@@ -29,7 +29,7 @@ public class PollService {
                 pagination.getSize(),
                 Sort.by("title").ascending()
         );
-        return pollRepository.findByTitleContaining(pagination.getTitle(), pageable);
+        return pollRepository.findByTitleContainingIgnoreCase(pagination.getTitle(), pageable);
     }
 
     public List<Poll> listCreatedBy(final String createdBy) {

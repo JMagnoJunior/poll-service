@@ -15,6 +15,6 @@ public interface PollRepository extends MongoRepository<Poll, String>, PagingAnd
 
     List<Poll> findByInitiatedGreaterThanOrderByInitiatedDesc(long initiated);
 
-    Page<Poll> findByTitleContaining(String title, Pageable pageable);
+    Page<Poll> findByTitleContainingIgnoreCase(String title, Pageable pageable);
 
 }
