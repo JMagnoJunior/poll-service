@@ -1,3 +1,2 @@
 #!/bin/bash
-DOCKER_BUILDKIT=1 docker build -t pollservice:1.0 .
-docker run -p 8080:8080 -it pollservice:1.0 /bin/bash
+COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up
